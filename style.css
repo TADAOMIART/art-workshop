@@ -781,6 +781,181 @@ h3 {
 }
 
 /* ========================================
+   業界別カスタム事例セクション
+======================================== */
+
+.industry-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.industry-case-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.industry-case-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+}
+
+.industry-case-header {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.industry-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.industry-case-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+.industry-theme {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.industry-case-body {
+    padding: 2.5rem 2rem;
+}
+
+.case-section {
+    margin-bottom: 2rem;
+}
+
+.case-section:last-child {
+    margin-bottom: 0;
+}
+
+.case-section h4 {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.case-section h4::before {
+    content: '▸';
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.case-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.case-section li {
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-medium);
+    line-height: 1.7;
+}
+
+.case-section li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.case-effects {
+    background: linear-gradient(135deg, rgba(233, 69, 96, 0.05), rgba(157, 78, 221, 0.05));
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.case-effects h4 {
+    border-bottom-color: var(--accent-color);
+}
+
+.industry-customize-note {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.industry-customize-note h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.industry-customize-note > p {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.customize-factors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.customize-factor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px;
+}
+
+.factor-icon {
+    font-size: 2.5rem;
+}
+
+.customize-factor span:last-child {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.customize-cta {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.customize-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========================================
    料金セクション
 ======================================== */
 
@@ -1420,8 +1595,22 @@ h3 {
     .challenges-grid,
     .benefits-grid,
     .use-cases-grid,
+    .industry-cases-grid,
     .pricing-cards {
         grid-template-columns: 1fr;
+    }
+    
+    .customize-factors {
+        gap: 1.5rem;
+    }
+    
+    .customize-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .customize-buttons .btn {
+        width: 100%;
     }
     
     .solution-content {
