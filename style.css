@@ -125,6 +125,17 @@ h3 {
     letter-spacing: 0.05em;
 }
 
+.company-link {
+    color: var(--text-medium);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.company-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 .nav {
     display: flex;
     gap: 2rem;
@@ -1255,6 +1266,31 @@ h3 {
     line-height: 1.7;
 }
 
+.footer-website {
+    margin-top: 1rem;
+}
+
+.website-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.website-link:hover {
+    color: var(--accent-cyan);
+    transform: translateX(5px);
+}
+
+.footer-main .company-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-main .company-link:hover {
+    color: var(--accent-cyan);
+}
+
 .footer-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1296,6 +1332,17 @@ h3 {
 .footer-bottom p {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+    color: var(--accent-cyan);
+    text-decoration: underline;
 }
 
 /* ========================================

@@ -1,8 +1,27 @@
-// スムーススクロール
+// スムーススクロール & フォーム自動選択
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
+        
+        // data-interest属性がある場合、フォームの該当項目を選択
+        const interestValue = this.getAttribute('data-interest');
+        if (interestValue && target && target.id === 'contact-form') {
+            setTimeout(() => {
+                const interestSelect = document.getElementById('interest');
+                if (interestSelect) {
+                    interestSelect.value = interestValue;
+                    // 選択された項目をハイライト
+                    interestSelect.style.borderColor = '#e94560';
+                    interestSelect.style.boxShadow = '0 0 0 3px rgba(233, 69, 96, 0.1)';
+                    setTimeout(() => {
+                        interestSelect.style.borderColor = '';
+                        interestSelect.style.boxShadow = '';
+                    }, 2000);
+                }
+            }, 500);
+        }
+        
         if (target) {
             const headerOffset = 80;
             const elementPosition = target.getBoundingClientRect().top;
